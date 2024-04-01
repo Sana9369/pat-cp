@@ -5,10 +5,7 @@ class Graph:
         self.adj_matrix = [[0] * vertices for _ in range(vertices)]
     def add_edge(self, u, v, w):
         self.adj_matrix[u][v] = w
-        self.adj_matrix[v][u] = w
-    def remove_edge(self, u, v):
-        self.adj_matrix[u][v] = 0
-        self.adj_matrix[v][u] = 0  
+        self.adj_matrix[v][u] = w 
     def print_matrix(self):
         for row in self.adj_matrix:
             print(row)
